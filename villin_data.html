@@ -1,0 +1,281 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="English" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intrinsic Dimension &mdash; MDIntrinsicDimension 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=3e66a7f4" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=76184ce0"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Villin Headpiece" href="villin_plots.html" />
+    <link rel="prev" title="Quick start" href="quickstart.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #ceff99" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            MDIntrinsicDimension
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">TUTORIAL</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#dependencies">Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#basic-usange">Basic Usange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#file-format-compatibility">File Format Compatibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#non-basic-usage">Non-basic usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Intrinsic Dimension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#section-id">Section ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#secondary-structure-id">Secondary Structure ID</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXAMPLES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="villin_plots.html">Villin Headpiece <br></a></li>
+<li class="toctree-l1"><a class="reference internal" href="NTL9_plots.html">NTL9 <br></a></li>
+<li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="estimators.html#villin">Villin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="estimators.html#ntl9">NTL9</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projections.html">Projections</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projections.html#villin">Villin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projections.html#ntl9">NTL9</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rmsd.html">Comparison RMSD</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rmsd.html#villin">Villin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rmsd.html#ntl9">NTL9</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #ceff99" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MDIntrinsicDimension</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Intrinsic Dimension</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/villin_data.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="cell tag_remove-input docutils container">
+</div>
+<section id="intrinsic-dimension">
+<h1>Intrinsic Dimension<a class="headerlink" href="#intrinsic-dimension" title="Link to this heading"></a></h1>
+<p>Computes the ID of the system over the entire molecular dynamics trajectory. <br>
+If <span class="mark"><code>id_method</code></span> is <code class="docutils literal notranslate"><span class="pre">local</span></code> the function returns:</p>
+<ul class="simple">
+<li><p>the averaged value of instantaneous ID computed on the entire trajectory.</p></li>
+<li><p>the averaged value of instantaneous ID computed from the <code class="docutils literal notranslate"><span class="pre">last</span></code> frames to the end of the trajectory.</p></li>
+<li><p>the instantaneous ID computed frame by frame on the entire trajectory.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_all</span><span class="p">,</span> <span class="n">mean_last</span><span class="p">,</span> <span class="n">local_id</span> <span class="o">=</span> <span class="n">intrinsic_dimension</span><span class="p">(</span><span class="n">topology</span> <span class="o">=</span> <span class="s1">&#39;examples/villin/2f4k.pdb&#39;</span><span class="p">,</span> <span class="n">trajectory</span> <span class="o">=</span> <span class="s1">&#39;examples/villin/2f4k_f0.xtc&#39;</span><span class="p">,</span> <span class="n">projection_method</span><span class="o">=</span><span class="s1">&#39;Dihedral&#39;</span><span class="p">,</span> <span class="n">id_method</span><span class="o">=</span><span class="s1">&#39;local&#39;</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mean instantaneous ID of the entire trajectory:&#39;</span><span class="p">,</span> <span class="n">mean_all</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mean instantaneous ID of the last 100 frames:&#39;</span><span class="p">,</span> <span class="n">mean_last</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Istantaneous ID of the entire trajectory: </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">local_id</span><span class="p">[</span><span class="mi">5</span><span class="p">:])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean instantaneous ID of the entire trajectory: 11.157584494989262
+Mean instantaneous ID of the last 100 frames: 11.123019242450509
+Istantaneous ID of the entire trajectory: 
+ [11.41462822 11.41576278 11.15977586 ... 11.06020263 11.04114149
+ 11.77013457]
+</pre></div>
+</div>
+</div>
+</div>
+<p>If <span class="mark"><code>id_method</code></span> is <code class="docutils literal notranslate"><span class="pre">global</span></code> the function returns:</p>
+<ul class="simple">
+<li><p>the value of global ID computed on the entire trajectory.</p></li>
+<li><p>the value of global ID computed on the <code class="docutils literal notranslate"><span class="pre">last</span></code> number of frames of the trajectory.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">global_all</span><span class="p">,</span> <span class="n">global_last</span> <span class="o">=</span> <span class="n">intrinsic_dimension</span><span class="p">(</span><span class="n">topology</span> <span class="o">=</span> <span class="s1">&#39;examples/villin/2f4k.pdb&#39;</span><span class="p">,</span> <span class="n">trajectory</span> <span class="o">=</span> <span class="s1">&#39;examples/villin/2f4k_f0.xtc&#39;</span><span class="p">,</span> <span class="n">projection_method</span><span class="o">=</span><span class="s1">&#39;Dihedral&#39;</span><span class="p">,</span> <span class="n">id_method</span><span class="o">=</span><span class="s1">&#39;global&#39;</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Global ID of the entire trajectory:&#39;</span><span class="p">,</span> <span class="n">global_all</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Global ID of the last 100 frames:&#39;</span><span class="p">,</span> <span class="n">global_last</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Global ID of the entire trajectory: 13.984373299745423
+Global ID of the last 100 frames: 13.4134570887855
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-id">
+<h1>Section ID<a class="headerlink" href="#section-id" title="Link to this heading"></a></h1>
+<p>This function computes ID over <strong>sliding windows</strong> of a protein sequence.</p>
+<p><strong>Additional Parameters</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">window_size</span></code> (int): window length in residues (default = 10)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stride</span></code> (int): number of residues between two windows (default = 1)</p></li>
+</ul>
+<p>Returns a DataFrame.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">section_id</span><span class="p">(</span><span class="n">topology</span> <span class="o">=</span> <span class="s1">&#39;examples/villin/2f4k.pdb&#39;</span><span class="p">,</span> <span class="n">trajectory</span> <span class="o">=</span> <span class="s1">&#39;examples/villin/2f4k_f0.xtc&#39;</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">5</span> <span class="p">,</span> <span class="n">projection_method</span><span class="o">=</span><span class="s1">&#39;Dihedral&#39;</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;ID table: </span><span class="se">\n</span><span class="s1"> </span><span class="si">{</span><span class="n">results</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ID table: 
+    start  end  entire simulation  last simulation  \
+0     42   56          10.570039         9.672545   
+1     47   61           9.640473         9.017598   
+2     52   66           9.933815         9.259813   
+3     57   71           9.037672         8.861538   
+4     62   76          11.017036        10.985726   
+
+                                       instantaneous  
+0  [8.414117105805504, 8.39326233568671, 6.782742...  
+1  [9.241642994778248, 8.184672178727354, 9.80033...  
+2  [9.353881004445087, 6.935150593639138, 9.70686...  
+3  [10.083695605419093, 9.187159871326793, 9.5521...  
+4  [11.016174986168613, 11.075169067215636, 11.76...  
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="secondary-structure-id">
+<h1>Secondary Structure ID<a class="headerlink" href="#secondary-structure-id" title="Link to this heading"></a></h1>
+<p>This function computes ID over <strong>secondary structure elements</strong>.</p>
+<p><strong>Additional Parameters</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">simplified</span></code> (bool): if True (default), uses simplified DSSP codes coil (C), strand (S) or helix (H); else helix (H), beta bridge (B), extended strand (E), three helix (G), hydrogen bonded turn (T), bend (S), loop or irregular element ( ).</p></li>
+</ul>
+<p>Returns</p>
+<ul class="simple">
+<li><p>A DataFrame with ID values per secondary structure</p></li>
+<li><p>A DataFrame with DSSP assignment per residue</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results</span><span class="p">,</span> <span class="n">secStr</span> <span class="o">=</span><span class="n">secondary_structure_id</span><span class="p">(</span><span class="n">topology</span> <span class="o">=</span> <span class="s1">&#39;examples/villin/2f4k.pdb&#39;</span><span class="p">,</span> <span class="n">trajectory</span> <span class="o">=</span> <span class="s1">&#39;examples/villin/2f4k_f0.xtc&#39;</span><span class="p">,</span> <span class="n">simplified</span> <span class="o">=</span> <span class="kc">True</span> <span class="p">,</span> <span class="n">projection_method</span><span class="o">=</span><span class="s1">&#39;Dihedral&#39;</span><span class="p">,</span> <span class="n">id_method</span><span class="o">=</span><span class="s1">&#39;local&#39;</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;ID table:</span><span class="se">\n</span><span class="s1"> </span><span class="si">{</span><span class="n">results</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> Secondary structure assignments:</span><span class="se">\n</span><span class="s1"> </span><span class="si">{</span><span class="n">secStr</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ID table:
+    start  end sec str type  entire simulation  last simulation  \
+0     42   76            C          11.157584        11.123019   
+
+                                       instantaneous  
+0  [11.600833536129166, 11.216419476809541, 11.42...  
+
+ Secondary structure assignments:
+    resid index resname sec str type
+0           42     LEU            C
+1           43     SER            C
+2           44     ASP            C
+3           45     GLU            C
+4           46     ASP            C
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="quickstart.html" class="btn btn-neutral float-left" title="Quick start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="villin_plots.html" class="btn btn-neutral float-right" title="Villin Headpiece" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Irene Cazzaniga.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XXXXXXXXXX', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

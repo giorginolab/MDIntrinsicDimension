@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="English" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comparison RMSD &mdash; MDIntrinsicDimension 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=3e66a7f4" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=76184ce0"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Projections" href="projections.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #ceff99" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            MDIntrinsicDimension
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">TUTORIAL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#dependencies">Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#basic-usange">Basic Usange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#file-format-compatibility">File Format Compatibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#non-basic-usage">Non-basic usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="villin_data.html">Intrinsic Dimension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="villin_data.html#section-id">Section ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="villin_data.html#secondary-structure-id">Secondary Structure ID</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXAMPLES</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="villin_plots.html">Villin Headpiece <br></a></li>
+<li class="toctree-l1"><a class="reference internal" href="NTL9_plots.html">NTL9 <br></a></li>
+<li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="estimators.html#villin">Villin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="estimators.html#ntl9">NTL9</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projections.html">Projections</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projections.html#villin">Villin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projections.html#ntl9">NTL9</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Comparison RMSD</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#villin">Villin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ntl9">NTL9</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #ceff99" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MDIntrinsicDimension</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Comparison RMSD</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/rmsd.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="comparison-rmsd">
+<h1>Comparison RMSD<a class="headerlink" href="#comparison-rmsd" title="Link to this heading"></a></h1>
+<p>As the two metrics provide similar results, despite being significantly different, we compared them on both <a class="reference internal" href="#villin"><span class="xref myst">villin</span></a> and <a class="reference internal" href="#ntl9"><span class="xref myst">NTL9</span></a>.</p>
+<p>RMSD is a measure of the displacement of the atoms from a reference structure, whereas ID, in this case, can detect different features of the protein.</p>
+<section id="villin">
+<h2>Villin<a class="headerlink" href="#villin" title="Link to this heading"></a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/8b40a985ef17e61b1151e1741cc1b2c323512ddc54b9eb157d26ffc0b93b2409.png" src="_images/8b40a985ef17e61b1151e1741cc1b2c323512ddc54b9eb157d26ffc0b93b2409.png" />
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/72f5bdfbd638c7894099f2902482649b9e7db394c6a7f617213852c4e782cf3c.png" src="_images/72f5bdfbd638c7894099f2902482649b9e7db394c6a7f617213852c4e782cf3c.png" />
+</div>
+</div>
+</section>
+<section id="ntl9">
+<h2>NTL9<a class="headerlink" href="#ntl9" title="Link to this heading"></a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/680bfc2c44ef8bda099362f3bfef7a83926792b13ee737ef2797043c5897c8d8.png" src="_images/680bfc2c44ef8bda099362f3bfef7a83926792b13ee737ef2797043c5897c8d8.png" />
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/e9cc6b606c8d14f395f9d381dc5d5cffcc5a9ae455ec362d934f268690acc1a3.png" src="_images/e9cc6b606c8d14f395f9d381dc5d5cffcc5a9ae455ec362d934f268690acc1a3.png" />
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="projections.html" class="btn btn-neutral float-left" title="Projections" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Irene Cazzaniga.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XXXXXXXXXX', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

@@ -1,0 +1,234 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="English" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NTL9 &mdash; MDIntrinsicDimension 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=3e66a7f4" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=76184ce0"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Estimators" href="estimators.html" />
+    <link rel="prev" title="Villin Headpiece" href="villin_plots.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #ceff99" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            MDIntrinsicDimension
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">TUTORIAL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#dependencies">Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#basic-usange">Basic Usange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#file-format-compatibility">File Format Compatibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#non-basic-usage">Non-basic usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="villin_data.html">Intrinsic Dimension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="villin_data.html#section-id">Section ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="villin_data.html#secondary-structure-id">Secondary Structure ID</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXAMPLES</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="villin_plots.html">Villin Headpiece <br></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">NTL9 <br></a></li>
+<li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="estimators.html#villin">Villin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="estimators.html#ntl9">NTL9</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projections.html">Projections</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projections.html#villin">Villin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projections.html#ntl9">NTL9</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rmsd.html">Comparison RMSD</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rmsd.html#villin">Villin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rmsd.html#ntl9">NTL9</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #ceff99" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MDIntrinsicDimension</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">NTL9 <br></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/NTL9_plots.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ntl9">
+<h1>NTL9 <br><a class="headerlink" href="#ntl9" title="Link to this heading"></a></h1>
+<div class="cell tag_remove-input docutils container">
+</div>
+<p>To provide examples of ID applications, we used trajectories of fast folding proteins generated by D. E. Shaw group (<a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/22034434/">DOI:10.1126/science.1208351</a>).</p>
+<p>In particular, we used N-terminal Domain of Ribosomal Protein L9 (NTL9, PDB: 2HBA), a 52 residue long protein with a single point mutation, K12M, to increase its stability by 1.9 kcal mol<sup>−1</sup> .</p>
+<p>We used protein structure and trajectory data of DESRES-Trajectory_NTL9-2-protein.
+We sampled the originally simulated trajectory in 6 shorter sub-trajectories of 2000 frames each, representing either the folded state of the protein (f0, f1, f2) or the unfolded one (u0, u1, u2).</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Original Trajectory</p></th>
+<th class="head"><p>New Trajectory</p></th>
+<th class="head"><p>Frames</p></th>
+<th class="head"><p>State</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>NTL9-2-protein-000.dcd</p></td>
+<td><p>ntl9_u0.xtc</p></td>
+<td><p>[:2000]</p></td>
+<td><p>Unfolded</p></td>
+</tr>
+<tr class="row-odd"><td><p>NTL9-2-protein-050.dcd</p></td>
+<td><p>ntl9_f0.xtc</p></td>
+<td><p>[:2000]</p></td>
+<td><p>Folded</p></td>
+</tr>
+<tr class="row-even"><td><p>NTL9-2-protein-080.dcd</p></td>
+<td><p>ntl9_u1.xtc</p></td>
+<td><p>[:2000]</p></td>
+<td><p>Unfolded</p></td>
+</tr>
+<tr class="row-odd"><td><p>NTL9-2-protein-100.dcd</p></td>
+<td><p>ntl9_f1.xtc</p></td>
+<td><p>[:2000]</p></td>
+<td><p>Folded</p></td>
+</tr>
+<tr class="row-even"><td><p>NTL9-2-protein-124.dcd</p></td>
+<td><p>ntl9_u2.xtc</p></td>
+<td><p>[:2000]</p></td>
+<td><p>Unfolded</p></td>
+</tr>
+<tr class="row-odd"><td><p>NTL9-2-protein-194.dcd</p></td>
+<td><p>ntl9_f2.xtc</p></td>
+<td><p>[:2000]</p></td>
+<td><p>Folded</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>intrinsic_dimension()</strong></p>
+<p>By computing ID as <code class="docutils literal notranslate"><span class="pre">local</span></code> it is possible to see how this value evolves along the trajectory, we called it <strong>Instantaneous ID</strong>.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/f327ea4731f8a3bc2c732c4cfdc8fd31ba1ce61b77e3d50c67bd5c0052e1e20e.png" src="_images/f327ea4731f8a3bc2c732c4cfdc8fd31ba1ce61b77e3d50c67bd5c0052e1e20e.png" />
+</div>
+</div>
+<p>The trajectories are clearly split in two ID groups, so we can divide the trajectories in &quot;folded&quot; and &quot;unfolded&quot; by setting a threshold at ID&lt;20, this shows the capability of ID to identify the two distinct states.</p>
+<p>This can be done both with <code class="docutils literal notranslate"><span class="pre">local</span></code> (including standard deviations) ID and the mean of the <code class="docutils literal notranslate"><span class="pre">global</span></code> ID along the trajectory.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/121eba659632b28e3460d884ed659587e90891246d608a48d4a1a0f19be081ea.png" src="_images/121eba659632b28e3460d884ed659587e90891246d608a48d4a1a0f19be081ea.png" />
+</div>
+</div>
+<p><strong>sections_id()</strong></p>
+<p>Similarly, with <span class='mark'><code>section_id</code></span>, it is possible to visualise, for each window, the value of ID along the trajectory (both as <code class="docutils literal notranslate"><span class="pre">global</span></code> ID and <code class="docutils literal notranslate"><span class="pre">local</span></code>).</p>
+<p>In this case it is intresting to notice how ID differs between replicas and windows, for example replica u2 completely overlaps with the folded values for the first few windows.</p>
+<div class="cell tag_remove-input tag_remove-inpit docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/089fcc2cdeab258a976991053b48bc60ffbe008a791824dc8da67de30241c4cc.png" src="_images/089fcc2cdeab258a976991053b48bc60ffbe008a791824dc8da67de30241c4cc.png" />
+<img alt="_images/e7582a30e8fddc58817fbb79ae370ee1831631b663662c93a5767e0e8bbc7e06.png" src="_images/e7582a30e8fddc58817fbb79ae370ee1831631b663662c93a5767e0e8bbc7e06.png" />
+</div>
+</div>
+<p><strong>secondary_structure_id()</strong></p>
+<p><span class='mark'><code>secondary_structure_id</code></span>, divides the protein by secondary structure elements instead of same-length windows, estimating ID along the trajectory on each element individually (both as <code class="docutils literal notranslate"><span class="pre">global</span></code> ID and <code class="docutils literal notranslate"><span class="pre">local</span></code>).</p>
+<p>Computing ID separately for each secondary structure element provides more detailed insights into the protein’s flexibility, as different types of secondary structures comprise distinct levels of flexibility in specific regions.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/50e0827670826fc94baccb55e84cd941bdbcf28d6a93d5c1e140a3d263d2df9d.png" src="_images/50e0827670826fc94baccb55e84cd941bdbcf28d6a93d5c1e140a3d263d2df9d.png" />
+<img alt="_images/d97703ade1afeaa1984513645921c1f5bae20639d57b399c3d16e6013993ece1.png" src="_images/d97703ade1afeaa1984513645921c1f5bae20639d57b399c3d16e6013993ece1.png" />
+<img alt="_images/45dd27e69d8bc2fa0c2c94a315798cd45a3fd7ea6947853153607552299a806c.png" src="_images/45dd27e69d8bc2fa0c2c94a315798cd45a3fd7ea6947853153607552299a806c.png" />
+</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="villin_plots.html" class="btn btn-neutral float-left" title="Villin Headpiece" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="estimators.html" class="btn btn-neutral float-right" title="Estimators" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Irene Cazzaniga.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XXXXXXXXXX', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

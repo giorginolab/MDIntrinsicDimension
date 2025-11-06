@@ -1,0 +1,185 @@
+/* === Custom Color Palette ===
+#4C4CA6 #4C81FD #69FFDC #DCFF69 #F4914D #A64C4C
+*/
+
+/* === SIDEBAR STYLING === */
+
+/* Sidebar background color */
+/* === Force Override Sidebar Background === */
+nav.wy-nav-side {
+  background-color: #EFEFEF !important;
+  background: #EFEFEF !important;      /* redundant but safe */
+  box-shadow: none !important;       /* remove shadow if any */
+}
+
+
+/* Remove any overlay pseudo-elements the theme adds */
+.wy-nav-side::before {
+  background: none !important;
+
+}
+/* Sidebar text color */
+.wy-menu-vertical {
+  color: #404040;  /* dark grey for readability */
+}
+
+/* Sidebar links (default) */
+.wy-menu-vertical a {
+  color: #404040 !important;
+  background: transparent;
+}
+
+/* Sidebar links color when hovering */
+.wy-menu-vertical a:hover {
+  color: #C099F3 !important;  /* light violet hover */
+  background: transparent;
+}
+
+/* Sidebar main titles (captions) */
+.wy-menu-vertical .caption {
+  color: #6100e0 !important;  /* violet for section titles */
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem 0.2rem;
+  letter-spacing: 0.5px;
+}
+
+/* Sidebar titles when active (clicked section) */
+.wy-menu-vertical .caption.current, 
+.wy-menu-vertical li.current > .caption {
+  color: #6100e0 !important;
+  background: transparent !important;
+}
+
+/* Sidebar links color after clicking (active) */
+.wy-menu-vertical li.current > a {
+  color: #6100e0 !important;  /* violet active link */
+  font-weight: bold;
+  background: transparent !important;
+}
+
+/* Sidebar top project name area */
+.wy-side-nav-search {
+  background-color: #A5CC21 !important;  /* match white sidebar */
+  border-bottom: 2px solid #A5CC21;    /* subtle violet divider */
+}
+
+/* Sidebar top project name text */
+.wy-side-nav-search a,
+.wy-side-nav-search .icon-home {
+  color: #404040 !important;  
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/* === TOP NAVIGATION BAR === */
+.wy-nav-top .wy-nav-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #404040;
+}
+
+/* === MAIN CONTENT LINKS === */
+.wy-nav-content a {
+  color: #6100e0;  /* default violet */
+  text-decoration: none;
+}
+
+.wy-nav-content a:hover {
+  color: #4E00B3;  /* darker violet on hover */
+  text-decoration: underline;
+}
+
+.wy-nav-content a:visited {
+  color: #4E00B3;  /* darker violet for visited links */
+}
+
+/* === INLINE CODE STYLING === */
+/* 1. Inline code blocks: ``like_this`` */
+.rst-content code.literal,
+.rst-content tt.literal {
+    background-color: white;
+    border: 2px solid #C099F3;
+    color: black; 
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+/* 2. Cross-reference roles (e.g. :confval:, :class:, :ref:) */
+.rst-content code.xref,
+.rst-content tt.xref {
+    background-color: #ffffff;
+    border: 3px solid #40404064; 
+    color: #6100e0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+/* 3. Custom highlighted words using :mark:`...` */
+.rst-content code.mark {
+    background-color: #ffffff;
+    border: 2px solid #6100e0;
+    color: black;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+/* For :mark:`...` inside IPython cells */
+.rst-content span.mark code {
+    background-color: #EFEFEF;
+    border: 2px solid #6100e0;
+    ;
+    color: black;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+/* === CODE BLOCKS === */
+div.highlight {
+  border-left: none !important;         /* remove the stripe */
+  background: transparent;              /* transparent background */
+}
+
+/* Python code blocks (highlighted with Pygments) */
+div.highlight-python, div.highlight > pre {
+  background-color: #e9ff9941;  /* soft light yellow-green tint */
+  border: 2px solid #A5CC21;
+  padding: 0em;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+/* === ADMONITIONS === */
+div.admonition {
+  background-color: whitesmoke !important;
+  border-left: 3px solid;
+  padding: 1em 1em 1em 1.25em;
+  margin: 2em 0;
+  border-radius: 0px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Default colors for admonitions */
+.admonition.note { border-left-color: #6AB0DE; }         
+.admonition.attention { border-left-color: #F0B37E; }       
+.admonition.important { border-left-color: #1ABC9C; }
+
+/* === RESPONSIVE TWEAKS === */
+@media (max-width: 768px) {
+  .wy-nav-content {
+    padding: 0.8rem;
+  }
+  .wy-nav-top .wy-nav-title {
+    font-size: 1.3rem;
+  }
+}
+:root{
+      --mystnb-source-margin-color: #A5CC21;
+}

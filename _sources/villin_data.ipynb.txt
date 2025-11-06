@@ -1,0 +1,271 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "dd50d20e",
+   "metadata": {
+    "tags": [
+     "parameters",
+     "remove-cell"
+    ]
+   },
+   "source": [
+    "\n",
+    "Before starting, remember to activate the environment:  <br>\n",
+    "**source env/bin/activate**\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6f7d98ce-47ad-4b54-b820-57e676d269b0",
+   "metadata": {
+    "tags": [
+     "remove-input"
+    ]
+   },
+   "outputs": [],
+   "source": [
+    "from md_intrinsic_dimension import intrinsic_dimension, section_id, secondary_structure_id\n",
+    "import numpy as np\n",
+    "import pandas as pd\n",
+    "import matplotlib.pyplot as plt\n",
+    "from matplotlib import cm\n",
+    "from matplotlib.colors import ListedColormap\n",
+    "import seaborn as sns\n",
+    "import logging\n",
+    "from moleculekit.molecule import Molecule"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "76030250",
+   "metadata": {},
+   "source": [
+    "# Intrinsic Dimension\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cee55a4c",
+   "metadata": {},
+   "source": [
+    "Computes the ID of the system over the entire molecular dynamics trajectory. <br>\n",
+    "If <span class=\"mark\"><code>id_method</code></span> is ``local`` the function returns:\n",
+    "* the averaged value of instantaneous ID computed on the entire trajectory.\n",
+    "* the averaged value of instantaneous ID computed from the ``last`` frames to the end of the trajectory.\n",
+    "* the instantaneous ID computed frame by frame on the entire trajectory."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "65e0cb7d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Mean instantaneous ID of the entire trajectory: 11.157584494989262\n",
+      "Mean instantaneous ID of the last 100 frames: 11.123019242450509\n",
+      "Istantaneous ID of the entire trajectory: \n",
+      " [11.41462822 11.41576278 11.15977586 ... 11.06020263 11.04114149\n",
+      " 11.77013457]\n"
+     ]
+    }
+   ],
+   "source": [
+    "mean_all, mean_last, local_id = intrinsic_dimension(topology = 'examples/villin/2f4k.pdb', trajectory = 'examples/villin/2f4k_f0.xtc', projection_method='Dihedral', id_method='local', verbose=False)\n",
+    "\n",
+    "print('Mean instantaneous ID of the entire trajectory:', mean_all)\n",
+    "print('Mean instantaneous ID of the last 100 frames:', mean_last)\n",
+    "print('Istantaneous ID of the entire trajectory: \\n', local_id[5:])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ee8e03dd",
+   "metadata": {},
+   "source": [
+    "If <span class=\"mark\"><code>id_method</code></span> is ``global`` the function returns:\n",
+    "* the value of global ID computed on the entire trajectory.\n",
+    "* the value of global ID computed on the ``last`` number of frames of the trajectory.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6f6ae2bb",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Global ID of the entire trajectory: 13.984373299745423\n",
+      "Global ID of the last 100 frames: 13.4134570887855\n"
+     ]
+    }
+   ],
+   "source": [
+    "global_all, global_last = intrinsic_dimension(topology = 'examples/villin/2f4k.pdb', trajectory = 'examples/villin/2f4k_f0.xtc', projection_method='Dihedral', id_method='global', verbose = False)\n",
+    "\n",
+    "print('Global ID of the entire trajectory:', global_all)\n",
+    "print('Global ID of the last 100 frames:', global_last)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "74c00f92",
+   "metadata": {},
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e95cd257-709a-447a-9439-050f82f3db18",
+   "metadata": {},
+   "source": [
+    "# Section ID"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a09cb899-c8b9-47b1-9268-b9446d4ae815",
+   "metadata": {},
+   "source": [
+    "This function computes ID over **sliding windows** of a protein sequence.\n",
+    "\n",
+    "\n",
+    "**Additional Parameters**\n",
+    "\n",
+    "\n",
+    "- ``window_size`` (int): window length in residues (default = 10)\n",
+    "- ``stride`` (int): number of residues between two windows (default = 1)\n",
+    "\n",
+    "Returns a DataFrame."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f6baa084-42a1-43c4-8991-3577eb00263a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "ID table: \n",
+      "    start  end  entire simulation  last simulation  \\\n",
+      "0     42   56          10.570039         9.672545   \n",
+      "1     47   61           9.640473         9.017598   \n",
+      "2     52   66           9.933815         9.259813   \n",
+      "3     57   71           9.037672         8.861538   \n",
+      "4     62   76          11.017036        10.985726   \n",
+      "\n",
+      "                                       instantaneous  \n",
+      "0  [8.414117105805504, 8.39326233568671, 6.782742...  \n",
+      "1  [9.241642994778248, 8.184672178727354, 9.80033...  \n",
+      "2  [9.353881004445087, 6.935150593639138, 9.70686...  \n",
+      "3  [10.083695605419093, 9.187159871326793, 9.5521...  \n",
+      "4  [11.016174986168613, 11.075169067215636, 11.76...  \n"
+     ]
+    }
+   ],
+   "source": [
+    "results = section_id(topology = 'examples/villin/2f4k.pdb', trajectory = 'examples/villin/2f4k_f0.xtc', window_size=15, stride=5 , projection_method='Dihedral', verbose =False)\n",
+    "print(f'ID table: \\n {results.head()}')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "619683f1",
+   "metadata": {},
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0d2649c0",
+   "metadata": {},
+   "source": [
+    "# Secondary Structure ID"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "88e537e2",
+   "metadata": {},
+   "source": [
+    "\n",
+    "This function computes ID over **secondary structure elements**.\n",
+    "\n",
+    "**Additional Parameters**\n",
+    "\n",
+    "- ``simplified`` (bool): if True (default), uses simplified DSSP codes coil (C), strand (S) or helix (H); else helix (H), beta bridge (B), extended strand (E), three helix (G), hydrogen bonded turn (T), bend (S), loop or irregular element ( ).\n",
+    "\n",
+    "Returns\n",
+    "\n",
+    "- A DataFrame with ID values per secondary structure\n",
+    "- A DataFrame with DSSP assignment per residue\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "bff43afb",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "ID table:\n",
+      "    start  end sec str type  entire simulation  last simulation  \\\n",
+      "0     42   76            C          11.157584        11.123019   \n",
+      "\n",
+      "                                       instantaneous  \n",
+      "0  [11.600833536129166, 11.216419476809541, 11.42...  \n",
+      "\n",
+      " Secondary structure assignments:\n",
+      "    resid index resname sec str type\n",
+      "0           42     LEU            C\n",
+      "1           43     SER            C\n",
+      "2           44     ASP            C\n",
+      "3           45     GLU            C\n",
+      "4           46     ASP            C\n"
+     ]
+    }
+   ],
+   "source": [
+    "results, secStr =secondary_structure_id(topology = 'examples/villin/2f4k.pdb', trajectory = 'examples/villin/2f4k_f0.xtc', simplified = True , projection_method='Dihedral', id_method='local', verbose = False)\n",
+    "\n",
+    "print(f'ID table:\\n {results.head(5)}')\n",
+    "print(f'\\n Secondary structure assignments:\\n {secStr.head(5)}')"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "env",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

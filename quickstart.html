@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="English" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick start &mdash; MDIntrinsicDimension 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=3e66a7f4" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=76184ce0"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Intrinsic Dimension" href="villin_data.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #ceff99" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            MDIntrinsicDimension
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">TUTORIAL</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#dependencies">Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quick start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic-usange">Basic Usange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-format-compatibility">File Format Compatibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#non-basic-usage">Non-basic usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="villin_data.html">Intrinsic Dimension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="villin_data.html#section-id">Section ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="villin_data.html#secondary-structure-id">Secondary Structure ID</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EXAMPLES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="villin_plots.html">Villin Headpiece <br></a></li>
+<li class="toctree-l1"><a class="reference internal" href="NTL9_plots.html">NTL9 <br></a></li>
+<li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="estimators.html#villin">Villin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="estimators.html#ntl9">NTL9</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projections.html">Projections</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projections.html#villin">Villin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projections.html#ntl9">NTL9</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rmsd.html">Comparison RMSD</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rmsd.html#villin">Villin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rmsd.html#ntl9">NTL9</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #ceff99" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MDIntrinsicDimension</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Quick start</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/quickstart.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="quick-start">
+<h1>Quick start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h1>
+<section id="basic-usange">
+<h2>Basic Usange<a class="headerlink" href="#basic-usange" title="Link to this heading"></a></h2>
+<p>First, activate the environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>env/bin/activate
+</pre></div>
+</div>
+<p>Then, in Python, import the package and the functions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">intrinsic_dimension</span><span class="w"> </span><span class="kn">import</span> <span class="n">intrinsic_dimension</span><span class="p">,</span> <span class="n">section_id</span><span class="p">,</span> <span class="n">secondary_structure_id</span>
+</pre></div>
+</div>
+<p>At this point, ID can be computed as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#ID of the entire object</span>
+<span class="n">intrinsic_dimension</span><span class="p">(</span><span class="n">topology</span> <span class="o">=</span> <span class="s1">&#39;villin/2f4k.pdb&#39;</span><span class="p">,</span> <span class="n">trajectory</span> <span class="o">=</span> <span class="s1">&#39;villin/2f4k_f1.xtc&#39;</span><span class="p">)</span>
+
+<span class="c1">#ID per fixed windows</span>
+<span class="n">section_id</span><span class="p">(</span><span class="n">topology</span> <span class="o">=</span> <span class="s1">&#39;villin/2f4k.pdb&#39;</span><span class="p">,</span> <span class="n">trajectory</span> <span class="o">=</span> <span class="s1">&#39;villin/2f4k_f1.xtc&#39;</span><span class="p">)</span>
+
+<span class="c1">#ID contiguous secondary structure elements</span>
+<span class="n">secondary_structure_id</span><span class="p">(</span><span class="n">topology</span> <span class="o">=</span> <span class="s1">&#39;villin/2f4k.pdb&#39;</span><span class="p">,</span> <span class="n">trajectory</span> <span class="o">=</span> <span class="s1">&#39;villin/2f4k_f1.xtc&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Any other parameter shared by the functions or specific for each, has a default.</p>
+<p>These parameters are:</p>
+<ul>
+<li><p><code class="code mark docutils literal notranslate"><span class="pre">projection_method</span></code>, default &quot;Distances&quot;</p></li>
+<li><p><code class="code mark docutils literal notranslate"><span class="pre">id_method</span></code>, default &quot;local&quot;</p></li>
+<li><p><code class="code mark docutils literal notranslate"><span class="pre">projection_kwargs</span></code>, extra parameters including:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sele</span></code>, default &quot;name CA&quot;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">step</span></code>, default 1</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metric</span></code>, default &quot;distances&quot;</p></li>
+<li><p>Additional keys</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="code mark docutils literal notranslate"><span class="pre">id_kwargs</span></code>, extra parameters including:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">estimator</span></code>, to select the estimator (default &quot;TwoNN&quot;).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">last</span></code>, for more precise results, all the functions in the package allow the computation of ID on the last part of the trajectory (default &quot;100&quot;).</p></li>
+<li><p>Additional keys</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>In case of <strong>section_id</strong> specific parameters are:</p>
+<ul class="simple">
+<li><p><code class="code mark docutils literal notranslate"><span class="pre">window_size</span></code>, default 10</p></li>
+<li><p><code class="code mark docutils literal notranslate"><span class="pre">stride</span></code>, default 1</p></li>
+</ul>
+<p>Wheras, for <strong>secondary_structure_id</strong>, the specific parameter is:</p>
+<ul class="simple">
+<li><p><code class="code mark docutils literal notranslate"><span class="pre">simplified</span></code>, default True</p></li>
+</ul>
+</section>
+<section id="file-format-compatibility">
+<h2>File Format Compatibility<a class="headerlink" href="#file-format-compatibility" title="Link to this heading"></a></h2>
+<p>The package supports many file formats, but we recommend using:</p>
+<ul class="simple">
+<li><p><cite>pdb</cite> for topology</p></li>
+<li><p><cite>xtc</cite> or <cite>dcd</cite> for trajectory</p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p><strong>scikit-dimension</strong> requires <strong>at least 101 frames</strong> of trajectory to repourpose a global estimator as local as the default neighbourhood is composed of 100 elements.
+If this default parameter is not changed, be sure to have long enough simulation trajectories.</p>
+</div>
+</section>
+<section id="non-basic-usage">
+<h2>Non-basic usage<a class="headerlink" href="#non-basic-usage" title="Link to this heading"></a></h2>
+<p>It is possible to use different parameters than the default ones defined above, for example:</p>
+<section id="load-the-moleculekit-molecule-object-outside-the-function">
+<h3>1. Load the moleculekit <cite>Molecule</cite> object outside the function<a class="headerlink" href="#load-the-moleculekit-molecule-object-outside-the-function" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#create the Molecule object by loading topology and trajectory</span>
+<span class="n">mol</span> <span class="o">=</span> <span class="n">Molecule</span><span class="p">(</span><span class="s1">&#39;villin/2f4k.pdb&#39;</span><span class="p">)</span>
+<span class="n">mol</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;villin/2f4k_f1.xtc&#39;</span><span class="p">)</span>
+
+<span class="c1">#call the ID function</span>
+<span class="n">intrinsic_dimension</span><span class="p">(</span><span class="n">mol</span> <span class="o">=</span> <span class="n">mol</span><span class="p">)</span> <span class="c1">#topology and trajectory ignored if mol is present</span>
+</pre></div>
+</div>
+<p>It is also possible to change the default parameters as follows:</p>
+</section>
+<section id="change-projection-method-and-projection-kwargs">
+<h3>2. Change <code class="code mark docutils literal notranslate"><span class="pre">projection_method</span></code> and <code class="code mark docutils literal notranslate"><span class="pre">projection_kwargs</span></code>.<a class="headerlink" href="#change-projection-method-and-projection-kwargs" title="Link to this heading"></a></h3>
+<p>Projections are used as preliminary step for the reduction of the total dimension number by removing rigid body roto-translations.</p>
+<p>Several projection types can be used, relying on <a class="reference external" href="https://software.acellera.com/moleculekit/moleculekit.projections.html">MoleculeKit projections</a> package avaialbility.</p>
+<p>The selected projection must be called as a string with the first letter in upper case, the same way they are defined in MoleculeKit projections:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">intrinsic_dimension</span><span class="p">(</span><span class="n">topology</span> <span class="o">=</span> <span class="s1">&#39;villin/2f4k.pdb&#39;</span><span class="p">,</span> <span class="n">trajectory</span> <span class="o">=</span> <span class="s1">&#39;villin/2f4k_f1.xtc&#39;</span><span class="p">,</span>
+        <span class="n">projection_method</span> <span class="o">=</span> <span class="s1">&#39;Dihedral&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="code mark docutils literal notranslate"><span class="pre">projection_kwargs</span></code> is a optional input dictionary containing of parameters required by the selected <code class="code mark docutils literal notranslate"><span class="pre">projection_method</span></code>.
+Default values are provided for methods like <code class="docutils literal notranslate"><span class="pre">Distances</span></code> and <code class="docutils literal notranslate"><span class="pre">Dihedrals</span></code> (see <em>Important</em> below), which are not handled directly via MoleculeKit.</p>
+<p>In particular, default values are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sele</span></code>, default &quot;name CA&quot;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">step</span></code>, default 1</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metric</span></code>, default &quot;distances&quot;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dihedrals</span></code>, default (&quot;psi&quot;, &quot;phi&quot;)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sincos</span></code>, default False</p></li>
+</ul>
+</div></blockquote>
+<p>These can be ignored if not necessary for the projection selected or overwritten.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#create the Molecule object by loading topology and trajectory</span>
+<span class="n">mol</span> <span class="o">=</span> <span class="n">Molecule</span><span class="p">(</span><span class="s1">&#39;villin/2f4k.pdb&#39;</span><span class="p">)</span>
+<span class="n">mol</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;villin/2f4k_f1.xtc&#39;</span><span class="p">)</span>
+
+<span class="c1">#define new parameters for projection method &quot;Coordianate&quot;</span>
+<span class="n">proj</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;atomsel&#39;</span><span class="p">:</span><span class="s1">&#39;name CA&#39;</span><span class="p">,</span><span class="s1">&#39;refmol&#39;</span><span class="p">:</span><span class="n">mol</span><span class="p">}</span>
+
+<span class="c1">#compute ID</span>
+<span class="n">intrinsic_dimension</span><span class="p">(</span><span class="n">topology</span> <span class="o">=</span> <span class="s1">&#39;villin/2f4k.pdb&#39;</span><span class="p">,</span> <span class="n">trajectory</span> <span class="o">=</span> <span class="s1">&#39;villin/2f4k_F.xtc&#39;</span><span class="p">,</span>
+<span class="n">projection_method</span> <span class="o">=</span> <span class="s1">&#39;Coordinate&#39;</span><span class="p">,</span> <span class="n">projection_kwargs</span><span class="o">=</span><span class="n">proj</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The <code class="code mark docutils literal notranslate"><span class="pre">projection_method</span></code> string must have the first letter of each word in upper case, the remaining in lower case accordingly to the method definition.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The ID matrix must be of shape <strong>n_frames x m_features</strong> with <em>m</em> &gt; 1.
+Accordingly, only the following MoleculeKit projection classes are supported:</p>
+<ul class="simple">
+<li><p>&quot;Coordinate&quot;,</p></li>
+<li><p>&quot;Dihedral&quot;,</p></li>
+<li><p>&quot;Distance&quot;,</p></li>
+<li><p>&quot;Fluctuation&quot;,</p></li>
+<li><p>&quot;Gyration&quot;,</p></li>
+<li><p>&quot;Plumed2&quot;,</p></li>
+<li><p>&quot;Sasa&quot;,</p></li>
+<li><p>&quot;Shell&quot;,</p></li>
+<li><p>&quot;SphericalCoordinate&quot;.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">Distances</span></code> and <code class="docutils literal notranslate"><span class="pre">Dihedrals</span></code> (plural) functions derived from the MoleculeKit projections module that accept additional parameters for a more flexible analysis.
+The singular form (<code class="docutils literal notranslate"><span class="pre">Distance</span></code> and <code class="docutils literal notranslate"><span class="pre">Dihedral</span></code>), still allow to use the original projection.</p>
+</div>
+</section>
+<section id="change-id-method-and-id-kwargs">
+<h3>3. Change <code class="code mark docutils literal notranslate"><span class="pre">id_method</span></code> and <code class="code mark docutils literal notranslate"><span class="pre">id_kwargs</span></code>.<a class="headerlink" href="#change-id-method-and-id-kwargs" title="Link to this heading"></a></h3>
+<p><code class="code mark docutils literal notranslate"><span class="pre">id_method</span></code> includes <code class="docutils literal notranslate"><span class="pre">local</span></code>, <code class="docutils literal notranslate"><span class="pre">global</span></code> (default &quot;local&quot;).</p>
+<p>In case of <code class="docutils literal notranslate"><span class="pre">local</span></code> ID estimation, the estimator identifies sub-regions of the dataset based on a shared local feature (in this case time) on which ID is computed.
+<code class="docutils literal notranslate"><span class="pre">global</span></code> ID estimation consists in the computation of a single-summary value of ID for the entire system. For a thorought image of the system in MD, we suggest to use <code class="docutils literal notranslate"><span class="pre">local</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#global or local ID method</span>
+<span class="n">intrinsic_dimension</span><span class="p">(</span><span class="n">topology</span> <span class="o">=</span> <span class="s1">&#39;villin/2f4k.pdb&#39;</span><span class="p">,</span> <span class="n">trajectory</span> <span class="o">=</span> <span class="s1">&#39;villin/2f4k_F.xtc&#39;</span><span class="p">,</span>
+        <span class="n">id_method</span> <span class="o">=</span> <span class="s1">&#39;global&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="code mark docutils literal notranslate"><span class="pre">id_kwargs</span></code> is an optional input dictionary containing:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">estimator</span></code>, allows to chose the estimator of desire, default &quot;TwoNN&quot; (see <em>Important</em> below).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">last</span></code>, the package allow to exclude the initial, possibly non equilibrated, part of the trajectory, slicing from the end of the simulation (default &quot;100&quot;).</p></li>
+</ul>
+</div></blockquote>
+<p>It is possible to add extra keys to change the default parameters of the selected estimator, accordingly to <a class="reference external" href="https://scikit-dimension.readthedocs.io/en/latest/">scikit-dimension</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#define id_kwargs parameters</span>
+<span class="n">estimator</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;estimator&#39;</span><span class="p">:</span> <span class="s1">&#39;lPCA&#39;</span><span class="p">,</span> <span class="s1">&#39;last&#39;</span><span class="p">:</span> <span class="s1">&#39;100&#39;</span><span class="p">}</span>
+<span class="n">intrinsic_dimension</span><span class="p">(</span><span class="n">topology</span> <span class="o">=</span> <span class="s1">&#39;villin/2f4k.pdb&#39;</span><span class="p">,</span> <span class="n">trajectory</span> <span class="o">=</span> <span class="s1">&#39;villin/2f4k_F.xtc&#39;</span><span class="p">,</span>
+         <span class="n">id_kwargs</span><span class="o">=</span> <span class="n">estimator</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>While all the scikit-dimension available <a class="reference external" href="https://scikit-dimension.readthedocs.io/en/latest/api.html">estimators</a> can, in principle, be used in this package, the complexity associated to a MD simulation can lead some of the estimators to failure.
+We suggest using <strong>TwoNN</strong> estimator (default) as it has proven to be one of the most robust.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="villin_data.html" class="btn btn-neutral float-right" title="Intrinsic Dimension" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Irene Cazzaniga.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XXXXXXXXXX', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>
