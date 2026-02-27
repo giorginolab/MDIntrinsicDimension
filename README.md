@@ -93,9 +93,10 @@ They are automatically installed.
 Citation
 ------------
 
-Consider citing the package through the corresponding paper (under review):
+When publishing research using this software, please cite the paper...
 
-> I. Cazzaniga, T. Giorgino. MDIntrinsicDimension: Dimensionality-Based Analysis of Collective Modes of Macromolecules from Molecular Dynamics Trajectories. 
+> Cazzaniga I, Giorgino T. MDIntrinsicDimension: Dimensionality-Based Analysis of Collective Motions in Macromolecules from Molecular Dynamics Trajectories. J Chem Inf Model. 2026 Feb 26. [doi:10.1021/acs.jcim.5c02716](https://pubs.acs.org/doi/10.1021/acs.jcim.5c02716)
+
 
 
 Notes for developers
