@@ -1,6 +1,8 @@
 .*.xtc*
-docs/examples/NTL9/
-docs/examples/villin/
+docs/examples/NTL9/*
+!docs/examples/NTL9/ntl9_f0_frame0_ref.pdb
+docs/examples/villin/*
+!docs/examples/villin/2f4k_f0_frame0_ref.pdb
 docs/examples/ntl9_data/
 docs/examples/villin_data/
 
