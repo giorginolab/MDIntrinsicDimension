@@ -26,9 +26,10 @@ dependencies = [
     "numpy",
     "moleculekit",
     "mdtraj", # optional dependency of moleculekit
-    "scikit-dimension", 
+    "scikit-dimension",
     "matplotlib",  # An undeclared dependency of scikit-dimension ?
     "pandas",
+    "seaborn>=0.13.2",
 ]
 
 [dependency-groups]
